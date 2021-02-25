@@ -638,6 +638,7 @@ function TreeProto:run(obj,...)
 				error("bad tree result")
 			end
 
+			didResume = false
 
 			-----------------------------------
 			--------- COMPOSITE NODES ---------	
