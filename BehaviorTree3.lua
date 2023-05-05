@@ -235,7 +235,7 @@ local function ProcessNode(node, nodes)
 
 	elseif node.type == "invert" then
 		assert(#node.params.nodes <= 1, "Can't process tree; invert decorator with multiple children")
-		assert(#node.params.nodes == 1, "Can't process tree; hanging invert decorator")
+		assert(#node.params.nodes == 0, "Can't process tree; hanging invert decorator")
 
 		-- All child node outcomes are flipped
 		for node, nextNode, isFinal in iterateNodes() do
