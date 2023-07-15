@@ -385,10 +385,10 @@ local function ProcessNode(node, nodes)
 		local randomNode = addNode("random")
 		randomNode.indices = {}
 		for _,childNode in pairs(node.params.nodes) do
-			if childNode.weight then
+			if childNode.params.weight then
 				local base = #randomNode.indices
 				local index = #nodes + 1
-				for i = 1, childNode.weight do
+				for i = 1, childNode.params.weight do
 					randomNode.indices[base + i] = index
 				end
 			else
