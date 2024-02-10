@@ -55,12 +55,14 @@ local NewNode = BehaviorTree5.Task({
       if object.i == 5 then
           return SUCCESS
       elseif object.i > 5 then
-         return FAIL
-   end
-
-   print("The task is still running...")
-      return RUNNING
+         return FAIL'
+      else
+         print("The task is still running...")
+         return RUNNING
+      end
    end,
+
+   
 
    finish = function(object, status, ...)
       object.i = nil
